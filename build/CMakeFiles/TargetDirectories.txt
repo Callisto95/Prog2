@@ -1,0 +1,3 @@
+/run/media/callisto/Data-2TB/workspace/C++/Prog2/build/CMakeFiles/simple.out.dir
+/run/media/callisto/Data-2TB/workspace/C++/Prog2/build/CMakeFiles/edit_cache.dir
+/run/media/callisto/Data-2TB/workspace/C++/Prog2/build/CMakeFiles/rebuild_cache.dir

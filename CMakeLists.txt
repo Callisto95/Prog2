@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 4.0.0)
-project(Prog2)
+cmake_minimum_required(VERSION 4.0)
+project(Prog2 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "-Weverything -Wno-c++98-compat")
+set(CMAKE_CXX_COMPILER clang++)
 
-add_executable(Prog2 main.cpp)
+include_directories(src)
+
+add_executable(simple.out src/first.cpp)

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/run/media/callisto/Data-2TB/workspace/C++/Prog2/build",
+  "command": "clang++ -I/run/media/callisto/Data-2TB/workspace/C++/Prog2/src -Weverything -Wno-c++98-compat -g -o CMakeFiles/simple.out.dir/src/first.cpp.o -c /run/media/callisto/Data-2TB/workspace/C++/Prog2/src/first.cpp",
+  "file": "/run/media/callisto/Data-2TB/workspace/C++/Prog2/src/first.cpp",
+  "output": "CMakeFiles/simple.out.dir/src/first.cpp.o"
+}
+]
