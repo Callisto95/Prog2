@@ -7,4 +7,7 @@ set(CMAKE_CXX_COMPILER clang++)
 
 include_directories(src)
 
-add_executable(simple.out src/first.cpp)
+add_executable(simple.out src/first.cpp
+        src/niceheader.h
+        src/functions.cpp
+        src/functions.h)

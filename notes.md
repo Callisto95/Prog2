@@ -1,0 +1,7 @@
+- use `#pragma once` as the header guard
+  - technically not a standard, but effectively every compiler uses it
+- code is interpreted from top to bottom (like python)
+- prefer using `using [FQN]` instead of namespaces
+- header files can be included by the corresponding `.cpp` file to switch from "python mode" to "java mode"
+  - this is what is usually done
+- including header files includes the underlying `.cpp` files as well
