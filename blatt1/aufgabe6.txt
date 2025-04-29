@@ -1,0 +1,10 @@
+1. Breakpoint nach Zeile 8 ("cout << "Hello, World!" << endl;")
+
+2. Team wird so gefüllt:
+["Paddy", "Linda"]
+["Paddy", "Linda", "Steve"]
+["Paddy", "Linda", "Steve", "Flo"]
+
+mit den Indizes [0, 1, 2, 3]
+
+Da teamSize den Wert 4 ist, aber der größte Index 3 ist, wird ein out-of-bounds Fehler geworfen.
