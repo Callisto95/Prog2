@@ -1,0 +1,12 @@
+1.
+/run/media/luca_s/Data/workspace/C++/Gruppe_Lee1E/blatt1/main.cpp:10:33: error: ‘team’ was not declared in this scope; did you mean ‘tm’?
+    7 |         cout << "Wir sind: " << team[0] << " ... " << team.at(teamSize) << endl;
+      |                                 ^~~~
+      |                                 tm
+
+a: main.cpp (/run/media/luca_s/Data/workspace/C++/Gruppe_Lee1E/blatt1/main.cpp)
+b: Zeile 10
+c: team[0]
+d: ‘team’ was not declared in this scope; did you mean ‘tm’?
+
+2. Die Variable `team` wurde verwendet, bevor sie deklariert wurde.
