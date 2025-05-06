@@ -11,15 +11,13 @@ using std::string;
 // TODO Aufgabe 1:
 //  Definiert die Funktion `inputNextSerialNumber()` so, dass sie eine Seriennummer als `string` auf der Konsole einliest und diese zurückgibt.
 
-string inputNextSerialNumber(){
+string inputNextSerialNumber() {
+	std::cout << "Bitte Seriennummer eingeben: " << std::flush;
 
-    std::cout << "Bitte Seriennummer eingeben: " << std::flush;
+	std::string serialNumber;
+	std::getline(std::cin, serialNumber);
 
-    std::string serialNumber;
-    std::getline(std::cin, serialNumber);
-
-    return serialNumber;
-
+	return serialNumber;
 }
 
 // TODO Aufgabe 3:
