@@ -3,6 +3,5 @@
 - Marcel Bryzek, 0115963
 - Luca Saalfeld, 0115990
 - Mathis Benecke, 0116163
-- {Name 3}, {y-Nummer}
 
 Tutor: Steen Leeker
