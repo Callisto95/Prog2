@@ -58,18 +58,12 @@ int main() {
 
     // TODO Aufgabe 1:
     //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
-    string serialNumber = inputNextSerialNumber();
-
     // TODO Aufgabe 4:
     //  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
-    /*
-     ???
-     */
-
-	checkSerialNumberAndPrintResult(serialNumber);
-    /*
-     ???
-     */
+	string serialNumber;
+	while ((serialNumber = inputNextSerialNumber()) != "fertig") {
+		checkSerialNumberAndPrintResult(serialNumber);
+	}
 
     return 0;
 }
