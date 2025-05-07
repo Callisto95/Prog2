@@ -9,9 +9,9 @@ constexpr int VERSION_INVALID = 0;
 
 // TODO Aufgabe 2:
 //  Deklariert die Funktion `getEuroSerialNumberVersion(serialNumber)`.
-int getEuroSerialNumberVersion(std::string & serialNumber);
+int getEuroSerialNumberVersion(const std::string& serialNumber);
 
-bool checkEuroSerialNumber2002(std::string & serialNumber);
+bool checkEuroSerialNumber2002(const std::string& serialNumber);
 bool checkEuroSerialNumber2013(std::string & serialNumber);
 
 #endif //BLATT2_EUROCHECK_H
