@@ -12,10 +12,17 @@ int toNumber(char c);
 //  Sie soll je nach Version der Banknote das entsprechende Jahr (2013 oder 2002) als `int` zurückgeben, und 0 für ungültige Seriennummern.
 //  Seriennummern vor 2013 haben *einen* Buchstaben am Anfang. Seit 2013 sind es *zwei*.
 int getEuroSerialNumberVersion(string & serialNumber) {
-    /*
-     ???
-     */
-    return 0;
+	bool isValidSerialNumber = isLetter(serialNumber.at(0));
+
+	if (!isValidSerialNumber) {
+		return 0;
+	}
+
+	if (isLetter(serialNumber.at(1))) {
+		return 2013;
+	}
+
+	return 2002;
 }
 
 // TODO Aufgabe 3+5:
