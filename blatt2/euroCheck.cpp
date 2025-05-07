@@ -1,4 +1,5 @@
 #include "euroCheck.h"
+
 #include <iostream>
 
 using std::string;
@@ -15,14 +16,14 @@ int getEuroSerialNumberVersion(string & serialNumber) {
 	bool isValidSerialNumber = isLetter(serialNumber.at(0));
 
 	if (!isValidSerialNumber) {
-		return 0;
+		return VERSION_INVALID;
 	}
 
 	if (isLetter(serialNumber.at(1))) {
-		return 2013;
+		return VERSION_2013;
 	}
 
-	return 2002;
+	return VERSION_2002;
 }
 
 // TODO Aufgabe 3+5:
@@ -30,16 +31,17 @@ int getEuroSerialNumberVersion(string & serialNumber) {
 //  Format: L NNNNNNNNNN N
 //  (Leerzeichen im Format werden vom Nutzer nicht mit eingegeben, sondern helfen hier nur beim Zählen)
 //  Tipp: `x / 10` liefert die Zehnerstelle und `x % 10` die Einerstelle einer zweistelligen Zahl x.
-/*
- ???
- */
+bool checkEuroSerialNumber2002(string& serialNumber) {
+	return true;
+}
+
 
 // TODO Aufgabe 3+6:
 //  Definiert die Funktion `checkEuroSerialNumber2013(serialNumber)`.
 //  Format: LL NNNNNNNNN N
-/*
- ???
- */
+bool checkEuroSerialNumber2013(std::string& serialNumber) {
+	return true;
+}
 
 
 // L

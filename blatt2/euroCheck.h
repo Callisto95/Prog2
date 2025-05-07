@@ -3,6 +3,10 @@
 
 #include <string>
 
+constexpr int VERSION_2013 = 2023;
+constexpr int VERSION_2002 = 2002;
+constexpr int VERSION_INVALID = 0;
+
 // TODO Aufgabe 2:
 //  Deklariert die Funktion `getEuroSerialNumberVersion(serialNumber)`.
 int getEuroSerialNumberVersion(std::string & serialNumber);
