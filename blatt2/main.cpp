@@ -25,15 +25,10 @@ string inputNextSerialNumber() {
 //  Implementiert die Funktion `checkSerialNumberAndPrintResult(serialNumber)`.
 //  Sie soll mithilfe der Funktion `getEuroSerialNumberVersion(serialNumber)` ermitteln, um welche Version einer Euro-Banknote es sich handelt, und die entsprechende Jahreszahl in der Konsole ausgeben.
 //  Anschliessend soll in einer Fallunterscheidung (switch) anhand der Jahreszahl die entsprechende Funktion `checkEuroSerialNumber2013/2002(serialNumber)` aufgerufen und das Ergebnis (Gueltig/Ungueltig) auf der Konsole ausgeben werden.
-void checkSerialNumberAndPrintResult(string & serialNumber) {
+void checkSerialNumberAndPrintResult(const string & serialNumber) {
 	int const version = getEuroSerialNumberVersion(serialNumber);
 
-	if (version == VERSION_INVALID) {
-		std::cout << "Invalid serial number" << std::endl;
-		return;
-	}
-
-	bool isValid;
+	bool isValid = false;
 	switch (version) {
 	case VERSION_2002: {
 		isValid = checkEuroSerialNumber2002(serialNumber);
@@ -42,19 +37,14 @@ void checkSerialNumberAndPrintResult(string & serialNumber) {
 	case VERSION_2013: {
 		isValid = checkEuroSerialNumber2013(serialNumber);
 	}
-	default:
-		isValid = false;
 	}
 
-	std::cout << (isValid ? "Valid" : "Invalid") << " serial number" << std::endl;
+	std::cout << (isValid ? "Gültig" : "Ungültig") << std::endl;
 }
 
 int main() {
     // TODO Aufgabe 4:
     //  Nutzt eine Kontrollstruktur, sodass nacheinander beliebig viele Seriennummern geprüft werden können.
-    /*
-     ???
-     */
 
     // TODO Aufgabe 1:
     //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
