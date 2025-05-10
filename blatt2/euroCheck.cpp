@@ -108,9 +108,8 @@ int calculateCheckSum(const std::string& serialNumber, const int letterCount) {
 		values.push_back(letterValue % 10);
 	});
 
-	std::transform(numbers.begin(), numbers.end(), std::back_inserter(values),
-				   [](const char n) { return toNumber(n); });
-	return std::reduce(values.begin(), values.end(), 0, [](const int n1, const int n2) { return n1 + n2; });
+	std::transform(numbers.begin(), numbers.end(), std::back_inserter(values), toNumber);
+	return std::accumulate(values.begin(), values.end(), 0);
 }
 
 
