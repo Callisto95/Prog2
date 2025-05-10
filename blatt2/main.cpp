@@ -33,9 +33,6 @@ void checkSerialNumberAndPrintResult(string & serialNumber) {
 	case VERSION_2013:
 		isValidSerialnumber = checkEuroSerialNumber2013(serialNumber);
 		break;
-	default:
-		break;
-
 	}
 	std::cout << (isValidSerialnumber?"Gueltig":"Ungueltig") << std::endl;
 }
@@ -43,24 +40,14 @@ void checkSerialNumberAndPrintResult(string & serialNumber) {
 int main() {
     // TODO Aufgabe 4:
     //  Nutzt eine Kontrollstruktur, sodass nacheinander beliebig viele Seriennummern geprüft werden können.
-    /*
-     ???
-     */
-
-        // TODO Aufgabe 1:
-        //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
-        string serialNumber = inputNextSerialNumber();
-
-        // TODO Aufgabe 4:
-        //  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
-        /*
-         ???
-         */
-
-        checkSerialNumberAndPrintResult(serialNumber);
-    /*
-     ???
-     */
-
+	// TODO Aufgabe 4:
+	//  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
+	string serialNumber;
+	while ((serialNumber = inputNextSerialNumber()) != "fertig") {
+		// TODO Aufgabe 1:
+		//  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
+		// string serialNumber = inputNextSerialNumber();
+		checkSerialNumberAndPrintResult(serialNumber);
+	}
     return 0;
 }
