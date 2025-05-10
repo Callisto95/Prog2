@@ -12,10 +12,13 @@ int toNumber(char c);
 //  Sie soll je nach Version der Banknote das entsprechende Jahr (2013 oder 2002) als `int` zurückgeben, und 0 für ungültige Seriennummern.
 //  Seriennummern vor 2013 haben *einen* Buchstaben am Anfang. Seit 2013 sind es *zwei*.
 int getEuroSerialNumberVersion(string & serialNumber) {
-    /*
-     ???
-     */
-    return 0;
+    if (isLetter(serialNumber.at(0)) && isLetter(serialNumber.at(1)) ) {
+		return VERSION_2002;
+    } else if (isLetter(serialNumber.at(0)) ) {
+		return VERSION_2013;
+
+    }
+    return VERSION_INVALID;
 }
 
 // TODO Aufgabe 3+5:
@@ -23,16 +26,18 @@ int getEuroSerialNumberVersion(string & serialNumber) {
 //  Format: L NNNNNNNNNN N
 //  (Leerzeichen im Format werden vom Nutzer nicht mit eingegeben, sondern helfen hier nur beim Zählen)
 //  Tipp: `x / 10` liefert die Zehnerstelle und `x % 10` die Einerstelle einer zweistelligen Zahl x.
-/*
- ???
- */
+bool checkEuroSerialNumber2002 (std::string & serialNumber) {
+	return true;
+
+}
 
 // TODO Aufgabe 3+6:
 //  Definiert die Funktion `checkEuroSerialNumber2013(serialNumber)`.
 //  Format: LL NNNNNNNNN N
-/*
- ???
- */
+bool checkEuroSerialNumber2013(std::string & serialNumber) {
+	return true;
+}
+
 
 
 // L

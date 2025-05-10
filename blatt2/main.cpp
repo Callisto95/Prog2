@@ -2,9 +2,7 @@
 
 // TODO Aufgabe 3:
 //  Inkludiert die Funktionen aus den `euroCheck.h/cpp`-Dateien.
-/*
- ???
- */
+#include "euroCheck.h"
 
 using std::string;
 
@@ -25,7 +23,21 @@ string inputNextSerialNumber() {
 //  Sie soll mithilfe der Funktion `getEuroSerialNumberVersion(serialNumber)` ermitteln, um welche Version einer Euro-Banknote es sich handelt, und die entsprechende Jahreszahl in der Konsole ausgeben.
 //  Anschliessend soll in einer Fallunterscheidung (switch) anhand der Jahreszahl die entsprechende Funktion `checkEuroSerialNumber2013/2002(serialNumber)` aufgerufen und das Ergebnis (Gueltig/Ungueltig) auf der Konsole ausgeben werden.
 void checkSerialNumberAndPrintResult(string & serialNumber) {
+	int version = getEuroSerialNumberVersion(serialNumber);
+	bool isValidSerialnumber = false;
+	switch (version) {
 
+	case VERSION_2002:
+		isValidSerialnumber = checkEuroSerialNumber2002(serialNumber);
+		break;
+	case VERSION_2013:
+		isValidSerialnumber = checkEuroSerialNumber2013(serialNumber);
+		break;
+	default:
+		break;
+
+	}
+	std::cout << (isValidSerialnumber?"Gueltig":"Ungueltig") << std::endl;
 }
 
 int main() {
@@ -37,8 +49,7 @@ int main() {
 
         // TODO Aufgabe 1:
         //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
-        string serialNumber;
-        inputNextSerialNumber();
+        string serialNumber = inputNextSerialNumber();
 
         // TODO Aufgabe 4:
         //  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
