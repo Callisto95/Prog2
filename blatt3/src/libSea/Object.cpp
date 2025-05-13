@@ -47,7 +47,8 @@ namespace Sea {
 		//  (`otherObject`) überschneiden.
 
 		vector<Coordinates> points = getAllCoordinates(otherObject, otherObject.size, otherObject.orientation);
-		return std::any_of(points.begin(), points.end(),atCoordinates);
+		return std::any_of(points.begin(), points.end(),
+						   [this](Coordinates const& coordinates) { return atCoordinates(coordinates); });
 	}
 
 } // namespace Sea
