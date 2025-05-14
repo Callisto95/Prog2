@@ -6,34 +6,32 @@
 
 
 // TODO Aufgabe 3:
-//  Implementiert die Klasse `Missile` als Erweiterung (Vererbung) der Klasse `Coordinates`, im Namensraum `GameObjects`.
-/*
- ???
- */
+//  Implementiert die Klasse `Missile` als Erweiterung (Vererbung) der Klasse `Coordinates`, im Namensraum
+//  `GameObjects`.
+namespace GameObjects {
 
-        // TODO Aufgabe 3:
-        //  Deklariert einen Konstruktor, sodass Missiles mit `Coordinates` erstellt werden müssen.
-        /*
-         ???
-         */
+	class Missile : public Sea::Coordinates {
+	protected:
+		bool hit;
 
-        // TODO Aufgabe 3:
-        //  Deklariert eine Funktion `void hitSomething()`, die diese Instanz als Treffer markiert.
-        //  (Dazu ist eine zusätzliche Membervariable nötig)
-        /*
-         ???
-         */
+	public:
+		// TODO Aufgabe 3:
+		//  Deklariert einen Konstruktor, sodass Missiles mit `Coordinates` erstellt werden müssen.
+		Missile(Coordinates const& coordinates);
 
-        // TODO Aufgabe 3:
-        //  Deklariert eine Funktion `bool hasHitSomething() const`, die prüft, ob diese Instanz ein Treffer war.
-        /*
-         ???
-         */
+		// TODO Aufgabe 3:
+		//  Deklariert eine Funktion `void hitSomething()`, die diese Instanz als Treffer markiert.
+		//  (Dazu ist eine zusätzliche Membervariable nötig)
+		void hitSomething();
 
-
+		// TODO Aufgabe 3:
+		//  Deklariert eine Funktion `bool hasHitSomething() const`, die prüft, ob diese Instanz ein Treffer war.
+		bool hasHitSomething() const;
+	};
+} // namespace GameObjects
 // TODO Aufgabe 3:
 //  Entfernt die Kommentar-Zeichen (//) vor `#define CLASS_MISSILE_COMPLETE` wenn Aufgabe 3 erledigt ist:
-// #define CLASS_MISSILE_COMPLETE
+#define CLASS_MISSILE_COMPLETE
 
 
-#endif //BLATT3_MISSILE_H
+#endif // BLATT3_MISSILE_H
