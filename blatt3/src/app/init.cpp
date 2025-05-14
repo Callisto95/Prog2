@@ -45,7 +45,8 @@ string inputPlayerName()
     //  Es soll ein Spielername eingegeben werden.
     //  In der Ausgabe soll eine Spielernummer durchgezählt werden (Spieler 1, Spieler 2).
     //  Dazu soll eine `static` Variable verwendet werden.
-    cout << endl << "Name von Spieler " << "???" << ":";
+	static int playerNumber = 1;
+	cout << endl << "Name von Spieler " << playerNumber << ":";
 
     string playerName;
     getline(cin, playerName);
