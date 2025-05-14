@@ -1,8 +1,11 @@
+#include "euroCheck.h"
 #include <iostream>
 
 // TODO Aufgabe 3:
 //  Inkludiert die Funktionen aus den `euroCheck.h/cpp`-Dateien.
-#include "euroCheck.h"
+/*
+ ???
+ */
 
 using std::string;
 
@@ -22,45 +25,35 @@ string inputNextSerialNumber() {
 //  Implementiert die Funktion `checkSerialNumberAndPrintResult(serialNumber)`.
 //  Sie soll mithilfe der Funktion `getEuroSerialNumberVersion(serialNumber)` ermitteln, um welche Version einer Euro-Banknote es sich handelt, und die entsprechende Jahreszahl in der Konsole ausgeben.
 //  Anschliessend soll in einer Fallunterscheidung (switch) anhand der Jahreszahl die entsprechende Funktion `checkEuroSerialNumber2013/2002(serialNumber)` aufgerufen und das Ergebnis (Gueltig/Ungueltig) auf der Konsole ausgeben werden.
-void checkSerialNumberAndPrintResult(string & serialNumber) {
-	int version = getEuroSerialNumberVersion(serialNumber);
-	bool isValidSerialnumber = false;
+void checkSerialNumberAndPrintResult(const string & serialNumber) {
+	int const version = getEuroSerialNumberVersion(serialNumber);
+
+	bool isValid = false;
 	switch (version) {
-
-	case VERSION_2002:
-		isValidSerialnumber = checkEuroSerialNumber2002(serialNumber);
+	case VERSION_2002: {
+		isValid = checkEuroSerialNumber2002(serialNumber);
 		break;
-	case VERSION_2013:
-		isValidSerialnumber = checkEuroSerialNumber2013(serialNumber);
-		break;
-	default:
-		break;
-
 	}
-	std::cout << (isValidSerialnumber?"Gueltig":"Ungueltig") << std::endl;
+	case VERSION_2013: {
+		isValid = checkEuroSerialNumber2013(serialNumber);
+	}
+	}
+
+	std::cout << (isValid ? "Gültig" : "Ungültig") << std::endl;
 }
 
 int main() {
     // TODO Aufgabe 4:
     //  Nutzt eine Kontrollstruktur, sodass nacheinander beliebig viele Seriennummern geprüft werden können.
-    /*
-     ???
-     */
 
-        // TODO Aufgabe 1:
-        //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
-        string serialNumber = inputNextSerialNumber();
-
-        // TODO Aufgabe 4:
-        //  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
-        /*
-         ???
-         */
-
-        checkSerialNumberAndPrintResult(serialNumber);
-    /*
-     ???
-     */
+    // TODO Aufgabe 1:
+    //  Ruft `inputNextSerialNumber()` auf, um eine Seriennummer einzugeben.
+    // TODO Aufgabe 4:
+    //  Das Programm soll beendet werden, wenn statt einer Seriennummer "fertig" eingegeben wurde.
+	string serialNumber;
+	while ((serialNumber = inputNextSerialNumber()) != "fertig") {
+		checkSerialNumberAndPrintResult(serialNumber);
+	}
 
     return 0;
 }
