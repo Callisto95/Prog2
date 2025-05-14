@@ -10,15 +10,16 @@ namespace GameObjects {
 
     class Ship : public Sea::Object {
 
+    protected:
+    	int hits = 0;
+
     public:
         using Sea::Object::Object; // inherit constructors with identical parameters
 
         bool isInsideSeaBounds() const;
         // TODO Aufgabe 4:
         //  Deklariert die Funktion `bool checkAndUpdateIncomingMissile(Missile & missile)`
-        /*
-         ???
-         */
+        bool checkAndUpdateIncomingMissile(Missile & missile);
         bool isDestroyed() const;
     };
 
@@ -27,7 +28,7 @@ namespace GameObjects {
 
 // TODO Aufgabe 4:
 //  Entfernt die Kommentar-Zeichen (//), wenn Aufgabe 4 erledigt ist:
-// #define CLASS_SHIP_COMPLETE
+#define CLASS_SHIP_COMPLETE
 
 
 #endif //BLATT3_SHIP_H
