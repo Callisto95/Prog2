@@ -25,8 +25,8 @@ using GameObjects::PlayerSea;
 using GameObjects::Constants;
 
 
-unsigned int const Constants::seaSizeX = 3;
-unsigned int const Constants::seaSizeY = 3;
+unsigned int constexpr Constants::seaSizeX = 3;
+unsigned int constexpr Constants::seaSizeY = 3;
 vector<unsigned int> const Constants::shipSizes = { 2, 1 };
 
 

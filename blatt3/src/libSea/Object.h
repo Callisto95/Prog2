@@ -2,6 +2,9 @@
 #define BLATT3_OBJECT_H
 
 
+#include <vector>
+
+
 #include "Coordinates.h"
 
 
@@ -22,6 +25,8 @@ namespace Sea {
 
         bool atCoordinates(Coordinates const & coordinates) const;
         bool intersectsWith(Object const & otherObject) const;
+
+    	std::vector<Coordinates> getAllCoordinates() const;
     };
 
 }

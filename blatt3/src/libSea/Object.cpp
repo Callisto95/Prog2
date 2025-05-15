@@ -28,7 +28,6 @@ namespace Sea {
 		size(newSize),
 		orientation(newOrientation) {}
 
-
 	bool Object::atCoordinates(Coordinates const& coordinates) const {
 		// TODO Aufgabe 2:
 		//  Nutzt die Funktionalität von `Coordinates`, um zu bestimmen, ob ein Teil dieses Objekts auf den übergebenen
@@ -65,6 +64,5 @@ namespace Sea {
 		 ???
 		 */
 	}
-
 
 } // namespace Sea

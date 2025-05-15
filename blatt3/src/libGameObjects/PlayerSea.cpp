@@ -1,5 +1,9 @@
 #include "PlayerSea.h"
 
+#include <iostream>
+using std::cout;
+using std::endl;
+
 #include <string>
 using std::string;
 using std::to_string;
@@ -109,4 +113,24 @@ namespace GameObjects {
         return true;
     }
 
+	void PlayerSea::printSea() const {
+    	char sea[Constants::seaSizeX][Constants::seaSizeY];
+
+		for (unsigned int x = 0; x < Constants::seaSizeX; x++) {
+			for (unsigned int y = 0; y < Constants::seaSizeY; y++) {
+				sea[x][y] = '~';
+			}
+		}
+
+    	for (Missile const& missile : missilesSent) {
+    		sea[missile.getX()][missile.getY()] = missile.hasHitSomething() ? 'X' : '*';
+    	}
+
+    	for (unsigned int y = 0; y < Constants::seaSizeY; y++) {
+    		for (unsigned int x = 0; x < Constants::seaSizeX; x++) {
+    			cout << sea[x][y];
+    		}
+    		cout << endl;
+    	}
+	}
 }
