@@ -42,16 +42,18 @@ namespace GameObjects {
     // TODO Aufgabe 6:
     //  Erweitert `addShip` so, dass der Rückgabewert angibt, welches tatsächliche Problem aufgetreten ist:
     //  Außerhalb des Spielfelds (Seegrenzen) oder Überlappung mit einem anderen Schiff.
-    /*
-     ???
-     */
-    bool PlayerSea::addShip(Ship const & ship)
+    AddShipResult PlayerSea::addShip(Ship const & ship)
     {
-        if (!ship.isInsideSeaBounds() || overlapWithExistingShips(ship)) {
-            return false;
-        }
+		if (!ship.isInsideSeaBounds()) {
+			return AddShipResult::OUT_OF_BOUNDS;
+		}
+
+    	if (overlapWithExistingShips(ship)) {
+    		return AddShipResult::OVERLAP;
+    	}
+
         ships.push_back(ship);
-        return true;
+        return AddShipResult::SUCCESS;
     }
 
     bool PlayerSea::sendMissileTo(PlayerSea & otherSea, Coordinates const & targetCoordinates)

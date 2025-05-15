@@ -11,6 +11,12 @@
 
 namespace GameObjects {
 
+	enum class AddShipResult {
+		SUCCESS,
+		OVERLAP,
+		OUT_OF_BOUNDS
+	};
+
     class PlayerSea {
     private:
         std::string playerName;
@@ -33,10 +39,7 @@ namespace GameObjects {
         // TODO Aufgabe 6:
         //  Erweitert `addShip(..)` so, dass nicht nur ein `bool`, sondern ein Statuswert (`enum class`) zurückgegeben wird.
         //  Dieser soll nicht nur angeben ob, sondern auch warum ein Schiff nicht hinzugefügt werden konnte.
-        /*
-         ???
-         */
-        bool addShip(Ship const & ship);
+        AddShipResult addShip(Ship const & ship);
 
         bool sendMissileTo(PlayerSea & otherSea, Sea::Coordinates const & targetCoordinates);
         bool missileAlreadySentTo(Sea::Coordinates const & targetCoordinates) const;
