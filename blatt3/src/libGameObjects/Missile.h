@@ -7,28 +7,28 @@
 
 // TODO Aufgabe 3:
 //  Implementiert die Klasse `Missile` als Erweiterung (Vererbung) der Klasse `Coordinates`, im Namensraum `GameObjects`.
-/*
- ???
- */
+namespace GameObjects {
 
+	class Missile : public Sea::Coordinates {
+
+		bool isHit = false;
         // TODO Aufgabe 3:
         //  Deklariert einen Konstruktor, sodass Missiles mit `Coordinates` erstellt werden müssen.
-        /*
-         ???
-         */
+
+		Missile(Coordinates coordinates);
 
         // TODO Aufgabe 3:
         //  Deklariert eine Funktion `void hitSomething()`, die diese Instanz als Treffer markiert.
         //  (Dazu ist eine zusätzliche Membervariable nötig)
-        /*
-         ???
-         */
+        void hitSomething();
 
         // TODO Aufgabe 3:
         //  Deklariert eine Funktion `bool hasHitSomething() const`, die prüft, ob diese Instanz ein Treffer war.
         /*
          ???
          */
+	};
+}
 
 
 // TODO Aufgabe 3:
