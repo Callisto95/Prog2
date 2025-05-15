@@ -11,7 +11,7 @@ namespace GameObjects {
     class Ship : public Sea::Object {
 
     protected:
-    	int hits = 0;
+    	unsigned int hits = 0;
 
     public:
         using Sea::Object::Object; // inherit constructors with identical parameters

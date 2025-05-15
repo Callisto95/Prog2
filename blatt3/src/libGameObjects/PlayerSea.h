@@ -10,6 +10,9 @@
 
 
 namespace GameObjects {
+	inline std::string FIELD_WATER = "\u001B[96m~\u001B[0m";
+	inline std::string FIELD_HIT = "\u001B[31mX\u001B[0m";
+	inline std::string FIELD_NO_HIT = "\u001B[35m*\u001B[0m";
 
 	enum class AddShipResult {
 		SUCCESS,
