@@ -114,16 +114,16 @@ namespace GameObjects {
     }
 
 	void PlayerSea::printSea() const {
-    	char sea[Constants::seaSizeX][Constants::seaSizeY];
+    	string sea[Constants::seaSizeX][Constants::seaSizeY];
 
 		for (unsigned int x = 0; x < Constants::seaSizeX; x++) {
 			for (unsigned int y = 0; y < Constants::seaSizeY; y++) {
-				sea[x][y] = '~';
+				sea[x][y] = FIELD_WATER;
 			}
 		}
 
     	for (Missile const& missile : missilesSent) {
-    		sea[missile.getX()][missile.getY()] = missile.hasHitSomething() ? 'X' : '*';
+    		sea[missile.getX()][missile.getY()] = missile.hasHitSomething() ? FIELD_HIT : FIELD_NO_HIT;
     	}
 
     	for (unsigned int y = 0; y < Constants::seaSizeY; y++) {

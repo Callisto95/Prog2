@@ -25,8 +25,10 @@ using GameObjects::PlayerSea;
 using GameObjects::Constants;
 
 
-unsigned int constexpr Constants::seaSizeX = 3;
-unsigned int constexpr Constants::seaSizeY = 3;
+// compiler warning: array initializer with unknown length -> const != constexpr
+// moved to Constants.h
+// unsigned int constexpr Constants::seaSizeX = 3;
+// unsigned int constexpr Constants::seaSizeY = 3;
 vector<unsigned int> const Constants::shipSizes = { 2, 1 };
 
 

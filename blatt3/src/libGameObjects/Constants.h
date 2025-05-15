@@ -9,8 +9,8 @@ namespace GameObjects {
 
     class Constants {
     public:
-        static unsigned int const seaSizeX;
-        static unsigned int const seaSizeY;
+        static unsigned int constexpr seaSizeX = 3;
+        static unsigned int constexpr seaSizeY = 3;
 
         static std::vector<unsigned int> const shipSizes;
     };
