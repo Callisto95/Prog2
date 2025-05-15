@@ -10,15 +10,16 @@ namespace GameObjects {
 
     class Ship : public Sea::Object {
 
+		unsigned int hitCount = 0;
+
     public:
         using Sea::Object::Object; // inherit constructors with identical parameters
 
         bool isInsideSeaBounds() const;
         // TODO Aufgabe 4:
         //  Deklariert die Funktion `bool checkAndUpdateIncomingMissile(Missile & missile)`
-        /*
-         ???
-         */
+        bool checkAndUpdateIncomingMissiles(Missile & missile);
+
         bool isDestroyed() const;
     };
 
