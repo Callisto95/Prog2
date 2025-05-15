@@ -45,6 +45,8 @@ namespace GameObjects {
         bool missileAlreadySentTo(Sea::Coordinates const & targetCoordinates) const;
 
         bool allShipsDestroyed() const;
+
+    	void printSea() const;
     };
 
 }

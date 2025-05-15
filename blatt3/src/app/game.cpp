@@ -24,6 +24,8 @@ void gameLoop(vector<PlayerSea> & playerSeas)
         PlayerSea & currentPlayerSea = playerSeas[round % 2];
         PlayerSea & otherPlayerSea = playerSeas[(round + 1) % 2];
 
+    	currentPlayerSea.printSea();
+
         Coordinates targetCoordinates = inputMissileTargetCoordinates(currentPlayerSea);
         bool hit = currentPlayerSea.sendMissileTo(otherPlayerSea, targetCoordinates);
         if (hit) {

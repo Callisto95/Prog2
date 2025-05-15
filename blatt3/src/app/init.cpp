@@ -25,8 +25,8 @@ using Sea::Orientation;
 #include "PlayerSea.h"
 
 
-unsigned int const Constants::seaSizeX = 3;
-unsigned int const Constants::seaSizeY = 3;
+unsigned int constexpr Constants::seaSizeX = 3;
+unsigned int constexpr Constants::seaSizeY = 3;
 vector<unsigned int> const Constants::shipSizes = { 2, 1 };
 
 
@@ -83,6 +83,7 @@ bool initializeShip(PlayerSea & playerSea, unsigned int size)
         cout << "Das Schiff kann nicht auf einem anderes Schiff liegen." << endl;
 		break;
 	}
+	case GameObjects::AddShipResult::SUCCESS: {}
 	}
 
     return addResult == GameObjects::AddShipResult::SUCCESS;
