@@ -47,6 +47,7 @@ string inputPlayerName()
     //  Dazu soll eine `static` Variable verwendet werden.
 	static int playerNumber = 1;
 	cout << endl << "Name von Spieler " << playerNumber << ":";
+	playerNumber++;
 
     string playerName;
     getline(cin, playerName);
