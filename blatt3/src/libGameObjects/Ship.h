@@ -28,7 +28,7 @@ namespace GameObjects {
 
 // TODO Aufgabe 4:
 //  Entfernt die Kommentar-Zeichen (//), wenn Aufgabe 4 erledigt ist:
-// #define CLASS_SHIP_COMPLETE
+#define CLASS_SHIP_COMPLETE
 
 
 #endif //BLATT3_SHIP_H

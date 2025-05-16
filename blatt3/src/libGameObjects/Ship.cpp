@@ -3,6 +3,8 @@
 #include "Constants.h"
 // TODO Aufgabe 7:
 //  Warum ist die folgende using-Anweisung hier unnötig?
+//  Da wir direkt danach die Zeile "namespace GameObjects" haben, ist dieser Ausdruck redundant, da man mit dem namespace
+//  die Library "GameObjects" schon abdecken und "Constants" Teil von "GameObjects" ist.
 using GameObjects::Constants;
 
 

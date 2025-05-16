@@ -2,27 +2,27 @@
 
 // TODO Aufgabe 7:
 //  Bringe die `include`- und `using`-Anweisungen in eine sinnvolle Ordnung.
+#include <climits>
 #include <string>
-#include "Coordinates.h"
-using Sea::Coordinates;
-using std::string;
 #include <iostream>
+#include <vector>
+using std::string;
 using std::getline;
 using std::cin;
 using std::endl;
-
 using std::cout;
+using std::vector;
+
+#include "Coordinates.h"
 #include "Ship.h"
-#include <vector>
-#include <climits>
 #include "Constants.h"
+#include "Object.h"
+#include "PlayerSea.h"
+using Sea::Coordinates;
+using Sea::Orientation;
 using GameObjects::Ship;
 using GameObjects::PlayerSea;
-using std::vector;
-#include "Object.h"
 using GameObjects::Constants;
-using Sea::Orientation;
-#include "PlayerSea.h"
 
 
 unsigned int const Constants::seaSizeX = 3;
@@ -82,7 +82,9 @@ bool initializeShip(PlayerSea & playerSea, unsigned int size)
     	cout << "Das Schiff darf nicht auf einem anderem Schiff liegen!" << endl;
     	break;
     }
+    case GameObjects::AddShipResult::ADDED_SUCCESSFULLY: {}
     }
+
     return addResult == GameObjects::AddShipResult::ADDED_SUCCESSFULLY;
 }
 
