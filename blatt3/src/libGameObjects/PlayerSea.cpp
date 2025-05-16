@@ -49,7 +49,8 @@ namespace GameObjects {
     {
         if (!ship.isInsideSeaBounds()) {
             return AddShipResult::OUT_OF_BOUNDS;
-        } else if (overlapWithExistingShips(ship)) {
+        }
+    	if (overlapWithExistingShips(ship)) {
 	        return AddShipResult::OVERLAP;
         }
         ships.push_back(ship);

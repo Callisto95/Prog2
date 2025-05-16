@@ -78,12 +78,12 @@ bool initializeShip(PlayerSea & playerSea, unsigned int size)
     	cout << "Das Schiff´muss innerhalb der Grenzen liegen!" << endl;
     	break;
     }
-    case GameObjects::AddShipResult::OVERLAP:{
+    case GameObjects::AddShipResult::OVERLAP: {
     	cout << "Das Schiff darf nicht auf einem anderem Schiff liegen!" << endl;
     	break;
     }
     }
-    return true;
+    return addResult == GameObjects::AddShipResult::ADDED_SUCCESSFULLY;
 }
 
 Ship inputShip(unsigned int size)
