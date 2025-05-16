@@ -73,9 +73,15 @@ bool initializeShip(PlayerSea & playerSea, unsigned int size)
     auto addResult = playerSea.addShip(ship);
     // TODO Aufgabe 6:
     //  Erweitert die Auswertung, und gebt entsprechend des Status-Rückgabewerts von `addShip(..)` eine spezifische Meldung aus.
-    if (!addResult) {
-        cout << "Das Schiff muss im Wasser liegen und dort darf nicht schon ein anderes Schiff liegen." << endl;
-        return false;
+    switch (addResult) {
+    case GameObjects::AddShipResult::OUT_OF_BOUNDS: {
+    	cout << "Das Schiff´muss innerhalb der Grenzen liegen!" << endl;
+    	break;
+    }
+    case GameObjects::AddShipResult::OVERLAP:{
+    	cout << "Das Schiff darf nicht auf einem anderem Schiff liegen!" << endl;
+    	break;
+    }
     }
     return true;
 }

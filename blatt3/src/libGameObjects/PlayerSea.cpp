@@ -45,13 +45,15 @@ namespace GameObjects {
     /*
      ???
      */
-    bool PlayerSea::addShip(Ship const & ship)
+    AddShipResult PlayerSea::addShip(Ship const & ship)
     {
-        if (!ship.isInsideSeaBounds() || overlapWithExistingShips(ship)) {
-            return false;
+        if (!ship.isInsideSeaBounds()) {
+            return AddShipResult::OUT_OF_BOUNDS;
+        } else if (overlapWithExistingShips(ship)) {
+	        return AddShipResult::OVERLAP;
         }
         ships.push_back(ship);
-        return true;
+        return AddShipResult::ADDED_SUCCESSFULLY;
     }
 
     bool PlayerSea::sendMissileTo(PlayerSea & otherSea, Coordinates const & targetCoordinates)
