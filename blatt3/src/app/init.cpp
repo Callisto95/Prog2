@@ -39,17 +39,18 @@ void initializePlayerSeasWithShips(vector<PlayerSea> & playerSeas)
     }
 }
 
-string inputPlayerName()
-{
-    // TODO Aufgabe 5:
-    //  Es soll ein Spielername eingegeben werden.
-    //  In der Ausgabe soll eine Spielernummer durchgezählt werden (Spieler 1, Spieler 2).
-    //  Dazu soll eine `static` Variable verwendet werden.
-    cout << endl << "Name von Spieler " << "???" << ":";
+string inputPlayerName() {
+	// TODO Aufgabe 5:
+	//  Es soll ein Spielername eingegeben werden.
+	//  In der Ausgabe soll eine Spielernummer durchgezählt werden (Spieler 1, Spieler 2).
+	//  Dazu soll eine `static` Variable verwendet werden.
+	static int playerCount = 0;
+	cout << endl << "Name von Spieler " << playerCount << ":";
+	playerCount++;
 
-    string playerName;
-    getline(cin, playerName);
-    return playerName;
+	string playerName;
+	getline(cin, playerName);
+	return playerName;
 }
 
 void initializeShips(PlayerSea & playerSea)
