@@ -5,7 +5,6 @@
 | Marcel Bryzek   | 12/12  | 32/29  |        |        |        |        |        |        |        |
 | Luca Saalfeld   | 12/12  | 32/29  |        |        |        |        |        |        |        |
 | Mathis Benecke  |  0/12  |   -    |        |        |        |        |        |        |        |
-serialNumber.length() != 11
 # Blatt 1
 
 ### Aufgabe 1 1/1
