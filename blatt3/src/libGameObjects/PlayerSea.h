@@ -17,8 +17,8 @@ namespace GameObjects {
 	inline std::string COLOUR_PURPLE		  = "\u001B[35m";
 	inline std::string COLOUR_CYAN			  = "\u001B[96m";
 
-	inline std::string FIELD_WATER	= COLOUR_BLUE_BACKGROUND + STYLE_BLINK + "~" + STYLE_RESET_ALL;
-	inline std::string FIELD_HIT	= COLOUR_BLUE_BACKGROUND + "X" + STYLE_RESET_ALL;
+	inline std::string FIELD_WATER	= COLOUR_BLUE_BACKGROUND + COLOUR_CYAN + STYLE_BLINK + "~" + STYLE_RESET_ALL;
+	inline std::string FIELD_HIT	= COLOUR_BLUE_BACKGROUND + COLOUR_RED + "X" + STYLE_RESET_ALL;
 	inline std::string FIELD_NO_HIT = COLOUR_BLUE_BACKGROUND + COLOUR_PURPLE + "*" + STYLE_RESET_ALL;
 
 	enum class AddShipResult {
