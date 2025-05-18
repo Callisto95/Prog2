@@ -11,7 +11,7 @@ namespace Sea {
 		unsigned int			 x0 = startPosition.getX();
 		unsigned int			 y0 = startPosition.getY();
 
-		for (int i = 0; i < size; i++) {
+		for (unsigned int i = 0; i < size; i++) {
 
 			if (orientation == Sea::Orientation::X) {
 				positions.emplace_back(x0 + i, y0);
