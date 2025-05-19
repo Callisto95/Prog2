@@ -2,17 +2,22 @@
 
 // TODO Aufgabe 7:
 //  Bringe die `include`- und `using`-Anweisungen in eine sinnvolle Ordnung.
-#include "Coordinates.h"
-#include "PlayerSea.h"
-using GameObjects::PlayerSea;
 #include <iostream>
-#include <vector>
 using std::cout;
 using std::endl;
-using Sea::Coordinates;
-using std::vector;
-#include "init.h"
 using std::cin;
+
+#include <vector>
+using std::vector;
+
+#include "PlayerSea.h"
+using GameObjects::PlayerSea;
+
+#include "Coordinates.h"
+using Sea::Coordinates;
+
+#include "init.h"
+
 
 
 // TODO Aufgabe 7:
