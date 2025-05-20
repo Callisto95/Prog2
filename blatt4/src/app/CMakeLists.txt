@@ -1,3 +1,3 @@
-add_executable(Battleship main.cpp init.cpp init.h game.cpp game.h utils.cpp utils.h)
+add_executable(battleship main.cpp init.cpp init.h game.cpp game.h utils.cpp utils.h)
 
-target_link_libraries(Battleship GameObjects Sea)
+target_link_libraries(battleship GameObjects Sea)
