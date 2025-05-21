@@ -17,11 +17,11 @@ namespace GameObjects {
         return false;
     }
 
-    void Ship::checkHits(Missile & missile)
+    void Ship::checkHits(std::shared_ptr<Missile> const& missile)
     {
         for (unsigned int i = 0; i < size; ++i) {
             Coordinates shipHitPosition = (orientation == Sea::Orientation::X) ? Coordinates(x + i, y) : Coordinates(x, y + i);
-            if (missile.checkHit(shipHitPosition)) {
+            if (missile->checkHit(shipHitPosition)) {
                 missileHitPositions.push_back(shipHitPosition);
             }
         }

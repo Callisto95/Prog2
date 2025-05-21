@@ -21,10 +21,10 @@ namespace GameObjects {
 
         // TODO Aufgabe 1:
         //  Die Listen `missilesSent` und `missilesReceived` sollen nicht direkt Missile-Instanzen (Kopien) speichern, sondern Smart Pointer (`shared_ptr`) nutzen, um auf existierende Instanzen zu verweisen.
-        std::vector<Missile> missilesSent, missilesReceived;
+        std::vector<std::shared_ptr<Missile>> missilesSent, missilesReceived;
 
         // TODO Aufgabe 1:
-        bool receiveMissile(Missile & missile);
+        bool receiveMissile(std::shared_ptr<Missile> missile);
 
         OutputGrid gridOwnSea = OutputGrid(Constants::seaSizeY, std::vector<OutputGridCell>(Constants::seaSizeX));
         OutputGrid gridOtherSea = gridOwnSea;
@@ -51,7 +51,7 @@ namespace GameObjects {
         AddShipResult addShip(Ship const & ship);
 
         // TODO Aufgabe 1:
-        bool sendMissileTo(PlayerSea & otherSea, Missile missile);
+        bool sendMissileTo(PlayerSea & otherSea, std::shared_ptr<Missile> missile);
 
         bool allShipsDestroyed() const;
 

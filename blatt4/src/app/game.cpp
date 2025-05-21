@@ -76,7 +76,7 @@ bool sendRegularMissileTo(PlayerSea & currentPlayerSea, PlayerSea & otherPlayerS
 {
     // TODO Aufgabe 1:
     //  Erzeugt hier `shared_ptr<Missile>` statt "reine" Missile-Instanzen.
-    Missile missile(targetCoordinates);
+	std::shared_ptr<Missile> missile = make_shared<Missile>(targetCoordinates);
     return currentPlayerSea.sendMissileTo(otherPlayerSea, missile);
 }
 

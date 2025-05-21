@@ -57,25 +57,25 @@ namespace GameObjects {
     }
 
     // TODO Aufgabe 1:
-    bool PlayerSea::sendMissileTo(PlayerSea & otherSea, Missile missile)
+    bool PlayerSea::sendMissileTo(PlayerSea & otherSea, shared_ptr<Missile> missile)
     {
         otherSea.receiveMissile(missile);
         missilesSent.push_back(missile);
         // TODO Aufgabe 1:
-        missile.output(gridOtherSea);
-        return missile.hasHitSomething();
+        missile->output(gridOtherSea);
+        return missile->hasHitSomething();
     }
 
     // TODO Aufgabe 1:
-    bool PlayerSea::receiveMissile(Missile & missile)
+    bool PlayerSea::receiveMissile(shared_ptr<Missile> missile)
     {
         for (unsigned int shipIdx = 0; shipIdx < ships.size(); ++shipIdx) {
             // TODO Aufgabe 1:
             ships[shipIdx].checkHits(missile);
         }
         missilesReceived.push_back(missile);
-        missile.output(gridOwnSea);
-        return missile.hasHitSomething();
+        missile->output(gridOwnSea);
+        return missile->hasHitSomething();
     }
 
     bool PlayerSea::allShipsDestroyed() const

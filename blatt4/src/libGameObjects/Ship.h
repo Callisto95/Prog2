@@ -2,6 +2,7 @@
 #define BLATT4_SHIP_H
 
 
+#include <memory>
 #include <vector>
 
 #include "Object.h"
@@ -24,7 +25,7 @@ namespace GameObjects {
 
         bool isInsideSeaBounds() const;
 
-        void checkHits(Missile & missile);
+        void checkHits(const std::shared_ptr<Missile>& missile);
 
         bool isDestroyed() const;
 
