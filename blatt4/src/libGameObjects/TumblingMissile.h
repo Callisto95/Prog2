@@ -23,9 +23,9 @@ namespace GameObjects {
 
         // TODO Aufgabe 3:
         //  Deklariert Überladungen für die virtuellen Funktionen `getX(..)`, `getY(..)` und `toString()` der Klasse `Coordinates`.
-/*
- ???
- */
+		unsigned int getX() const override;
+		unsigned int getY() const override;
+		std::string  toString() const override;
     };
 
 }

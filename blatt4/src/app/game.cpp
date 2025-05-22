@@ -53,10 +53,7 @@ void gameTurn(PlayerSea & currentPlayerSea, PlayerSea & otherPlayerSea, unsigned
     Coordinates targetCoordinates = inputMissileTargetCoordinates(currentPlayerSea);
     // TODO Aufgabe 3:
     //  Ruft je nach Wert der Variablen `round` (gerade/ungerade) entweder `sendRegularMissileTo(..)` oder `sendTumblingMissileTo(..)` auf.
-    bool hit = sendRegularMissileTo(currentPlayerSea, otherPlayerSea, targetCoordinates);
-    /*
-     ???
-     */
+	bool hit = (round % 2 == 0 ? sendRegularMissileTo : sendTumblingMissileTo)(currentPlayerSea, otherPlayerSea, targetCoordinates);
 
     cout << n_endl(2) << (hit ? "Treffer!" : "Daneben!") << endl << string(80, '=') << endl;
 }
@@ -85,10 +82,8 @@ bool sendTumblingMissileTo(PlayerSea & currentPlayerSea, PlayerSea & otherPlayer
     // TODO Aufgabe 3:
     //  Entfernt den Aufruf von `sendRegularMissileTo(..)`.
     //  Erstellt hier stattdessen eine `TumblingMissile` und sendet diese analog zu `sendRegularMissileTo(..)`.
-    return sendRegularMissileTo(currentPlayerSea, otherPlayerSea, targetCoordinates);
-    /*
-     ???
-     */
+	std::shared_ptr<TumblingMissile> const missile = make_shared<TumblingMissile>(targetCoordinates);
+	return currentPlayerSea.sendMissileTo(otherPlayerSea, missile);
 }
 
 bool checkGameFinished(PlayerSea const & currentPlayerSea, PlayerSea const & otherPlayerSea)
