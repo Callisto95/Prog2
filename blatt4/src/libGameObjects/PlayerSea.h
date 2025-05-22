@@ -43,8 +43,8 @@ namespace GameObjects {
         // TODO Aufgabe 2:
         //  Deklariert hier (mindestens) eine eigene Exception-Klasse, die von `std::exception` erbt.
         //  Entfernt `AddShipResult` und passt die Funktion `addShip(..)` entsprechend an.
-		class ShipOutsideSeaBounds : std::exception {};
-		class ShipOverlapOtherShip : std::exception {};
+		class ShipOutsideSeaBoundsException : std::exception {};
+		class ShipOverlapOtherShipException : std::exception {};
 
         void addShip(Ship const & ship);
 

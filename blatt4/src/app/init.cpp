@@ -71,9 +71,9 @@ bool initializeShip(PlayerSea & playerSea, unsigned int size)
 	try {
 		playerSea.addShip(ship);
 		return true;
-	} catch (PlayerSea::ShipOverlapOtherShip const&) {
+	} catch (PlayerSea::ShipOverlapOtherShipException const&) {
 		cout << "Dort liegt schon ein Schiff." << endl;
-	} catch (PlayerSea::ShipOutsideSeaBounds const&) {
+	} catch (PlayerSea::ShipOutsideSeaBoundsException const&) {
 		cout << "Das Schiff muss im Wasser liegen (" << PlayerSea::getSeaBounds() << ")." << endl;
 	}
 

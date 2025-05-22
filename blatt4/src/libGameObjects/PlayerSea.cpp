@@ -46,10 +46,10 @@ namespace GameObjects {
     void PlayerSea::addShip(Ship const & ship)
     {
         if (!ship.isInsideSeaBounds()) {
-            throw ShipOutsideSeaBounds();
+            throw ShipOutsideSeaBoundsException();
         }
         if (overlapWithExistingShips(ship)) {
-            throw ShipOverlapOtherShip();
+            throw ShipOverlapOtherShipException();
         }
         ships.push_back(ship);
         ship.output(gridOwnSea);
