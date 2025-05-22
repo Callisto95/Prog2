@@ -33,7 +33,7 @@ namespace GameObjects {
     {
         // TODO Aufgabe 4:
         //  Nutzt den `operator==(..)` statt `samePositionAs(..)`.
-        if (samePositionAs(coordinates)) {
+        if (*this == coordinates) {
             hitSomething();
             return true;
         }

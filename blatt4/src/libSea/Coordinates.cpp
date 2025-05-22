@@ -21,7 +21,7 @@ namespace Sea {
 
     // TODO Aufgabe 4:
     //  Definiert den `operator==(..)` identisch zu und als Ersatz für die Funktion `samePositionAs(..)`.
-    bool Coordinates::samePositionAs(Coordinates const & otherCoordinates) const
+    bool Coordinates::operator==(Coordinates const & otherCoordinates) const
     {
         return samePositionAs(otherCoordinates.getX(), otherCoordinates.getY());
     }

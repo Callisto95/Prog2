@@ -43,7 +43,7 @@ namespace GameObjects {
         for (unsigned int missileIdx = 0; missileIdx < missileHitPositions.size(); ++missileIdx) {
             // TODO Aufgabe 4:
             //  Nutzt den `operator==(..)` statt `samePositionAs(..)`.
-            if (missileHitPositions[missileIdx].samePositionAs(coordinates)) {
+            if (missileHitPositions[missileIdx] == coordinates) {
                 return true;
             }
         }

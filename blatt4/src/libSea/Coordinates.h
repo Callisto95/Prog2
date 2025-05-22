@@ -20,7 +20,7 @@ namespace Sea {
         // TODO Aufgabe 4:
         //  Ersetzt die Funktion `samePositionAs(..)` durch den `operator==(..)`.
         //  Rückgabetyp, Parameter und Inhalt bleiben identisch.
-        bool samePositionAs(Coordinates const & otherCoordinates) const;
+        bool operator==(Coordinates const & otherCoordinates) const;
 
         virtual unsigned int getX() const;
         virtual unsigned int getY() const;
