@@ -46,6 +46,7 @@ namespace Sea {
 // TODO Aufgabe 4:
 //  Implementiert den `operator<<(..)` so, dass er die `toString()` nutzt, um die Koordinaten in den `std::ostream` auszugeben.
 //  (Eine Referenz von `std::ostream` kann wie `std::cout` verwendet werden.)
-/*
- ???
- */
+std::ostream& operator<<(std::ostream& stream, Sea::Coordinates const& coordinates) {
+	stream << coordinates.toString();
+	return stream;
+}

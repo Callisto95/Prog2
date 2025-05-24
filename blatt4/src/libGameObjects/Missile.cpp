@@ -20,7 +20,7 @@ namespace GameObjects {
     {
         // TODO Aufgabe 4:
         //  Nutzt den `operator<<(..)` statt `toString()`.
-        cout << endl << "(Create Missile | " << coordinates.toString() << ")";
+        cout << endl << "(Create Missile | " << coordinates << ")";
     }
 
     Missile::Missile(Missile const & missile)

@@ -52,15 +52,15 @@ namespace GameObjects {
     }
 
     // TODO Aufgabe 3:
-	unsigned int TumblingMissile::getX() const override {
+	unsigned int TumblingMissile::getX() const {
 		return Missile::getX() + offsetX;
 	}
 
-	unsigned int TumblingMissile::getY() const override {
+	unsigned int TumblingMissile::getY() const {
 		return Missile::getY() + offsetY;
 	}
 
-	std::string TumblingMissile::toString() const override {
+	std::string TumblingMissile::toString() const {
 		return Missile::toString();
 	}
 

@@ -33,9 +33,7 @@ namespace Sea {
 // TODO Aufgabe 4:
 //  Deklariert einen `operator<<(..)`.
 //  Dieser bekommt eine `std::ostream`- und eine `Sea::Coordinates`-Referenz übergeben und liefert eine `std::ostream`-Referenz zurück.
-/*
- ???
- */
+std::ostream& operator<<(std::ostream& stream, Sea::Coordinates const& coordinates);
 
 
 #endif //BLATT4_COORDINATES_H
